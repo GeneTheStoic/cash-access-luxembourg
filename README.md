@@ -47,7 +47,7 @@ On Windows, `run_all.ps1` runs the first four lines. Downloads and road distance
 
 The Bancomat map is indicative and some sites are still to be confirmed. The legacy record is incomplete, so changes are reported as bounds. Distances run from cell centroids. Age is measured at commune level (2018). Commuters, shoppers, and cross-border residents are outside the model; bank and central bank transaction data would be needed to weigh them.
 
-## Data licences
+## Data licenses
 
 OpenStreetMap data © OpenStreetMap contributors, ODbL. Census grid and commune data: STATEC, via the Geoportail Luxembourg open data API. Bancomat locations: public locator at bancomat.lu.
 
@@ -57,4 +57,4 @@ OpenStreetMap data © OpenStreetMap contributors, ODbL. Census grid and commune 
 
 Guilarte Homayden, E. (2026). *Access to Cash after ATM Consolidation in Luxembourg: Road Distances, Bounds on Lost Access, and Machine Placement*. Technical note. https://github.com/GeneTheStoic/cash-access-luxembourg
 
-MIT licence for the code.
+MIT license for the code.

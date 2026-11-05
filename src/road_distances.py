@@ -3,7 +3,7 @@
 1. Downloads the drivable OpenStreetMap road network of Luxembourg (plus a 2 km margin) with OSMnx.
 2. Snaps cell centroids and ATM sites to the nearest road node (straight-line snap distance is added).
 3. Runs one multi-source Dijkstra per scenario from a virtual source linked to all ATM nodes.
-4. Also computes the cell-to-cell road distance matrix used to optimise machine placement.
+4. Also computes the cell-to-cell road distance matrix used to optimize machine placement.
 
 Outputs (data/derived/):
   road_distance_by_cell.csv   grid_id, snap_m, d_<scenario>_km for every scenario
@@ -80,7 +80,7 @@ if __name__ == "__main__":
         w = csv.writer(f); w.writerow(keys)
         for i in range(len(cells["grid_id"])):
             w.writerow([out[k][i] for k in keys])
-    # cell-to-cell matrix for placement optimisation
+    # cell-to-cell matrix for placement optimization
     uniq, inv = np.unique(cnode, return_inverse=True)
     D = np.empty((len(uniq), len(cnode)))
     for c in range(0, len(uniq), 100):                                # chunks keep memory low

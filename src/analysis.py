@@ -85,7 +85,7 @@ def redundancy(cells, sites_xy, t=5.0):
 
 
 def greedy_add(M, pop, d0, steps, t):
-    """Add sites one by one (candidates: populated cells) maximising residents newly within t km."""
+    """Add sites one by one (candidates: populated cells) maximizing residents newly within t km."""
     cur = d0.copy(); chosen, cov = [], [float(pop[cur <= t].sum() / pop.sum())]
     for _ in range(steps):
         newly = ((M <= t) & (cur[:, None] > t)) * pop[:, None]
@@ -95,7 +95,7 @@ def greedy_add(M, pop, d0, steps, t):
 
 
 def greedy_pmedian(M, pop, p):
-    """Greedy p-median: same number of sites placed to minimise mean distance (candidates: populated cells)."""
+    """Greedy p-median: same number of sites placed to minimize mean distance (candidates: populated cells)."""
     cur = np.full(len(pop), np.inf); chosen = []
     for _ in range(p):
         cost = (np.minimum(cur[:, None], M) * pop[:, None]).sum(0)
@@ -134,7 +134,7 @@ def figures(cells, D, metric, res, sites):
     for k, lab, ls in [(BASELINE, "Before (OSM, Jan 2024)", "--"), (PLAN, "After (Bancomat plan)", "-")]:
         if k in D:
             ax.plot(grid, [cells["pop"][D[k] <= g].sum() / cells["pop"].sum() for g in grid], ls, color="k", label=lab)
-    ax.axvline(5, color="grey", lw=.6); ax.set_xlabel(f"{metric} distance (km)")
+    ax.axvline(5, color="gray", lw=.6); ax.set_xlabel(f"{metric} distance (km)")
     ax.set_ylabel("share of residents within distance"); ax.legend(frameon=False); ax.set_ylim(0, 1.01)
     fig.savefig(FIG / "coverage_curves.png", dpi=200, bbox_inches="tight"); plt.close(fig)
 

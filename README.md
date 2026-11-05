@@ -2,6 +2,8 @@
 
 Luxembourg's five largest retail banks are replacing their separate ATM fleets with one shared network, **Bancomat** (about 237 machines, against 595 cash machines in 2019). This repository measures what the change means for residents' access to cash, with open data only: the 2021 census on the 1 km grid, the public Bancomat locator, ATM locations recovered from OpenStreetMap at four dates, and road distances on the national road network.
 
+This is a preliminary analysis, prepared in November 2026 for an application to a doctoral position on cash infrastructures: a first look with open data, to understand the problem and test one possible research direction, not a finished study.
+
 Technical note: [`report/Access_to_Cash_Luxembourg_Guilarte_Homayden.pdf`](report/Access_to_Cash_Luxembourg_Guilarte_Homayden.pdf)
 
 ## Main results (road distances)
